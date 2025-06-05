@@ -1,11 +1,21 @@
-//your JS code here. If required.
-// let add="https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3";
-  let pauseSound;
-      function playMusic(e) {
-        console.log();
-        const sound = new Audio(`https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3`); // path to your sound file
-        if (typeof pauseSound === "object" && sound !== null)
-        pauseSound.pause();
-        pauseSound=sound;
-        sound.play();
-      }
+let currentSound = null;
+
+function playMusic(soundName) {
+  // Stop any currently playing sound
+  if (currentSound) {
+    currentSound.pause();
+    currentSound.currentTime = 0;
+  }
+
+  // Create new audio and play
+  currentSound = new Audio(`./sounds/${soundName}.mp3`);
+  currentSound.play();
+}
+
+function stopMusic() {
+  if (currentSound) {
+    currentSound.pause();
+    currentSound.currentTime = 0;
+    currentSound = null;
+  }
+}

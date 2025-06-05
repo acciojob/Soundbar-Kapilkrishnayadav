@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	    <div id="buttons">
-      <button onclick="playMusic(event)"  class="btn" >applause</button>
-      <button onclick="playMusic(event)"  class="btn" id="boo">boo</button>
-      <button onclick="playMusic(event)" class="btn" id="gasp">gasp</button>
-      <button onclick="playMusic(event)" class="btn" id="tada">tada</button>
-      <button onclick="playMusic(event)" class="btn" id="victory">victory</button>
-      <button onclick="playMusic(event)" class="btn" id="wrong">wrong</button>
-      <button onclick="playMusic(event)" class="stop btn">stop</button>
-    </div>
 
-    <script type="text/javascript" src="./script.js">
-</script>
+  <div id="buttons">
+    <button onclick="playMusic('applause')" class="btn">applause</button>
+    <button onclick="playMusic('boo')" class="btn">boo</button>
+    <button onclick="playMusic('gasp')" class="btn">gasp</button>
+    <button onclick="playMusic('tada')" class="btn">tada</button>
+    <button onclick="playMusic('victory')" class="btn">victory</button>
+    <button onclick="playMusic('wrong')" class="btn">wrong</button>
+    <button onclick="stopMusic()" class="stop btn">stop</button>
+  </div>
 
+  <script src="script.js"></script>
 </body>
-
 </html>
